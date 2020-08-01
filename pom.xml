@@ -144,4 +144,25 @@
 			</resource>
 		</resources>
 	</build>
+	<profiles>
+		<profile>
+			<id>ChromeAutomation</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>regression_testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
 </project>
