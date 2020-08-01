@@ -1,0 +1,3 @@
+13:08:14.242 ERROR Base.CustomDriver -Element not appeared on the web page
+13:08:14.288 ERROR Base.CustomDriver -Cannot click on : Category Option
+13:08:14.296 INFO  Base.CustomDriver -Waiting for max 3 seconds for element to be available

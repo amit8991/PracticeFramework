@@ -1,0 +1,5 @@
+13:17:18.352 INFO  extentreports.TestListener -onStart -> Test tag Name: Application Test
+13:17:18.360 INFO  extentreports.TestListener -These methods will be executed in the <test> tag
+13:17:18.361 INFO  extentreports.TestListener -filterByCategory
+13:17:18.361 INFO  extentreports.TestListener -verifySearchCourse
+13:17:18.362 INFO  extentreports.TestListener -testLogin

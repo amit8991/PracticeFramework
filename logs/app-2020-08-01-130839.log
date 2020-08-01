@@ -1,0 +1,2 @@
+13:08:39.850 ERROR Base.CustomDriver -Element not found with: xpath=>//a[contains(text(),'All Courses')]
+13:08:39.858 ERROR Base.CustomDriver -Cannot click on : All Courses Link

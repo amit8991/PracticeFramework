@@ -1,0 +1,2 @@
+13:06:54.692 ERROR Base.CustomDriver -Element not found with: xpath=>//a[contains(text(),'All Courses')]
+13:06:54.770 INFO  extentreports.TestListener -onTestFailure -> Test Method Name : testLogin

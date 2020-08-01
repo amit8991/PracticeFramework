@@ -1,0 +1,2 @@
+13:08:43.293 ERROR Base.CustomDriver -Element not found with: id=>search-courses
+13:08:43.304 ERROR Base.CustomDriver -Cannot Send keys on element Search Course Field with data : rest api

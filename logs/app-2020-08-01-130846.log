@@ -1,0 +1,3 @@
+13:08:46.354 ERROR Base.CustomDriver -Element not found with: id=>search-course-button
+13:08:46.359 ERROR Base.CustomDriver -Cannot click on : Search Course Button
+13:08:46.732 INFO  Base.CustomDriver -Screen Shot Was Stored at: C:\Users\admin\eclipse-workspace\PracticeFramework//test-output/screenshots//_Click Error _08-01-2020 13_08_46.png

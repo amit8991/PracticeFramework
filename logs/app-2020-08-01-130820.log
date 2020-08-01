@@ -1,0 +1,2 @@
+13:08:20.700 ERROR Base.CustomDriver -Element not found with: xpath=>//div[contains(@class,'course-filter')][1]//button
+13:08:20.707 ERROR Base.CustomDriver -Cannot click on : Category dropdown

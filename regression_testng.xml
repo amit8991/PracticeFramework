@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suite">
+	<listeners>
+		<listener
+			class-name="com.PracticeTestClasses.TestClasses.Base.TestListeners">
+		</listener>
+	</listeners>
+	<test name="Application Test" preserve-order="true">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.PracticeTestClasses.TestClasses.LoginTests" />
+			<class
+				name="com.PracticeTestClasses.TestClasses.AllCoursesTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

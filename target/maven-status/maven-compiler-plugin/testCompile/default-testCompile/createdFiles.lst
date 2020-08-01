@@ -1,0 +1,7 @@
+com\PracticeTestClasses\TestClasses\Base\CheckPoint.class
+com\PracticeTestClasses\TestClasses\Base\WebDriverFactory.class
+com\PracticeTestClasses\TestClasses\LoginTests.class
+com\PracticeTestClasses\TestClasses\Base\BaseTest.class
+others\ExcelExampleData.class
+others\LoggingDemo.class
+com\PracticeTestClasses\TestClasses\AllCoursesTest.class

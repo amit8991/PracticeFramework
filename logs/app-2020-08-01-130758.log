@@ -1,0 +1,4 @@
+13:07:58.378 ERROR Base.CustomDriver -Element not found with: xpath=>//div[contains(@class,'course-filter')][1]//button
+13:07:58.389 ERROR Base.CustomDriver -Cannot click on : Category dropdown
+13:07:58.847 INFO  Base.CustomDriver -Screen Shot Was Stored at: C:\Users\admin\eclipse-workspace\PracticeFramework//test-output/screenshots//_Click Error _08-01-2020 13_07_58.png
+13:07:58.875 INFO  Base.CustomDriver -Waiting for max:: 15 seconds for element to be clickable

@@ -1,0 +1,5 @@
+22:32:47.574 TRACE others.LoggingDemo -Trace Message Printed
+22:32:47.582 INFO  others.LoggingDemo -Info Message Printed
+22:32:47.583 DEBUG others.LoggingDemo -Debug Message Printed
+22:32:47.585 ERROR others.LoggingDemo -Error Message Printed
+22:32:47.585 FATAL others.LoggingDemo -Fatal Message Printed
