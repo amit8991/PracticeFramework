@@ -3,6 +3,7 @@ package com.PracticeTestClasses.TestClasses;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.PracticePageClasses.Pages.CategoryFilterPage;
@@ -12,7 +13,6 @@ import com.PracticeTestClasses.TestClasses.Base.BaseTest;
 
 
 public class AllCoursesTest extends BaseTest{
-
 
 	@BeforeClass
 	@Parameters({ "browser" })

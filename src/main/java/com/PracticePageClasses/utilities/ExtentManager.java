@@ -34,6 +34,8 @@ public class ExtentManager {
 		htmlReporter.config().setDocumentTitle("Automation Run");
 		htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setReportName(fileName);
+		htmlReporter.config().setAutoCreateRelativePathMedia(true);
+		
 
 		extent = new ExtentReports();
 		extent.setSystemInfo("Organization", "Practice");
