@@ -15,6 +15,7 @@ public class AllCoursesTest extends BaseTest{
 
 
 	@BeforeClass
+	@Parameters({ "browser" })
 	public void setUp() {
 		login = nav.login();
 		nav = login.signInWith(Constants.DEFAULT_USERNAME,Constants.DEFAULT_PASSWORD);
