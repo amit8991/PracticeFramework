@@ -1,7 +1,7 @@
 package com.PracticePageClasses.utilities;
 
 public class Constants {
-	public static final String BASE_URL = "https://learn.letskodeit.com";
+	public static final String BASE_URL = "https://www.letskodeit.com/practice";
 	public static final String USER_DIRECTORY = System.getProperty("user.dir");
 	public static final String OS_NAME = System.getProperty("os.name");
 	public static final String DRIVERS_DIRECTORY = "//drivers//";
