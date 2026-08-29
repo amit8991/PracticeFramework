@@ -12,6 +12,8 @@
 			<class name="com.PracticeTestClasses.TestClasses.LoginTests" />
 			<class
 				name="com.PracticeTestClasses.TestClasses.AllCoursesTest" />
+			<class
+				name="com.PracticeTestClasses.TestClasses.CourseNavigationTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
