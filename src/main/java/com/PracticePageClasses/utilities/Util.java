@@ -182,4 +182,37 @@ public class Util {
 
 	}
 
+	/**
+	 * Wait for page to load with specified timeout in seconds
+	 * This method is a utility for page waits
+	 * @param seconds - seconds to wait
+	 */
+	public static void waitForPageLoad(int seconds) {
+		try {
+			Thread.sleep(seconds * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Extract numeric amount value from price string
+	 * Removes currency symbols and returns numeric value
+	 * @param priceString - price string (e.g., "$19.99", "€25.50")
+	 * @return amount as double
+	 */
+	public static double extractAmountValue(String priceString) {
+		try {
+			// Remove currency symbols and extract the numeric value
+			String amount = priceString.replaceAll("[^0-9.]", "");
+			if (amount.isEmpty()) {
+				return 0.0;
+			}
+			return Double.parseDouble(amount);
+		} catch (Exception e) {
+			System.out.println("Error extracting amount from: " + priceString + " - " + e.getMessage());
+			return 0.0;
+		}
+	}
+
 }
