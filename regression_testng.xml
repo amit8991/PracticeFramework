@@ -14,6 +14,8 @@
 				name="com.PracticeTestClasses.TestClasses.AllCoursesTest" />
 			<class
 				name="com.PracticeTestClasses.TestClasses.CourseNavigationTest" />
+			<class
+				name="com.PracticeTestClasses.TestClasses.SeleniumWebDriverCourseEnrollmentTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
