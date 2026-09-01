@@ -1,6 +1,6 @@
 package com.PracticeTestClasses.TestClasses.Base;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,7 +54,7 @@ public class WebDriverFactory {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			threadedDriver.get().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			threadedDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 			threadedDriver.get().manage().window().maximize();
 		}
 		return threadedDriver.get();
@@ -104,7 +104,6 @@ public class WebDriverFactory {
 	}
 
 	public String getBrowser() {
-
 		return threadedBrowser.get();
 	}
 }
