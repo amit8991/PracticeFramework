@@ -1,6 +1,6 @@
 package com.PracticeTestClasses.TestClasses.Base;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -29,7 +29,7 @@ public class BaseTest {
 	public void commonSetUp(String browser) {
 		driver = WebDriverFactory.getInstance().getDriver(browser);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		baseURL = Constants.BASE_URL;
 		driver.get(baseURL);
 		nav = new NavigationPage(driver);
