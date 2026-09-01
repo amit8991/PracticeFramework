@@ -1,9 +1,9 @@
 package com.PracticePageClasses.Pages.Base;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -169,7 +169,7 @@ public class CustomDriver {
 	public void javascriptClick(String locator, String info) {
 		WebElement element = getElement(locator, info);
 		try {
-			js.executeScript("arguments[0].click", element);
+			js.executeScript("arguments[0].click();", element);
 			log.info("Clicked on : " + info);
 		} catch (Exception e) {
 			log.error("Cannot click on " + info);
@@ -178,17 +178,17 @@ public class CustomDriver {
 
 	public void clickWhenReady(By locator, int timeout) {
 		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ZERO);
 			WebElement element = null;
 			log.info("Waiting for max " + timeout + " seconds for element to be clickable");
-			WebDriverWait wait = new WebDriverWait(driver, 15);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 			element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 			element.click();
 			log.info("Element clicked on webpage");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		} catch (Exception e) {
 			log.error("Element not appeared on the webpage");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		}
 	}
 
@@ -334,7 +334,7 @@ public class CustomDriver {
 	}
 
 	public String getElementAttributeValue(String locator, String attribute) {
-		WebElement element = getElement(locator, "info");
+		WebElement element = getElement(locator, attribute);
 		return element.getAttribute(attribute);
 	}
 
@@ -342,15 +342,15 @@ public class CustomDriver {
 		By byType = getByType(locator);
 		WebElement element = null;
 		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ZERO);
 			log.info("Waiting for max " + timeout + " seconds for element to be available");
-			WebDriverWait wait = new WebDriverWait(driver, timeout);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 			element = wait.until(ExpectedConditions.visibilityOfElementLocated(byType));
 			log.info("Element appeared on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		} catch (Exception e) {
 			log.error("Element not appeared on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		}
 		return element;
 	}
@@ -359,15 +359,15 @@ public class CustomDriver {
 		By byType = getByType(locator);
 		WebElement element = null;
 		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ZERO);
 			log.info("Waiting for max:: " + timeout + " seconds for element to be clickable");
-			WebDriverWait wait = new WebDriverWait(driver, 15);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 			element = wait.until(ExpectedConditions.elementToBeClickable(byType));
 			log.info("Element is clickable on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		} catch (Exception e) {
 			log.error("Element not appeared on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		}
 		return element;
 	}
@@ -376,15 +376,15 @@ public class CustomDriver {
 		By byType = getByType(locator);
 		boolean elementInvisible = false;
 		try {
-			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ZERO);
 			log.info("Waiting for max:: " + timeout + " seconds for element to be available");
-			WebDriverWait wait = new WebDriverWait(driver, timeout);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 			elementInvisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(byType));
 			log.info("Element appeared on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		} catch (Exception e) {
 			log.error("Element not appeared on the web page");
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		}
 		return elementInvisible;
 	}
@@ -461,10 +461,10 @@ public class CustomDriver {
 	}
 
 	public void selectItemRightClick(String elementLocator, String itemLocator) {
-		WebElement element = getElement(elementLocator, " info");
+		WebElement element = getElement(elementLocator, "element");
 		Actions action = new Actions(driver);
 		action.contextClick(element).build().perform();
-		WebElement itemElement = getElement(itemLocator, "info");
+		WebElement itemElement = getElement(itemLocator, "item");
 		elementClick(itemElement, "Selected Item");
 	}
 
